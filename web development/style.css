@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    height: 544px;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+}
+.item{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 30px;
+}
+#id1{
+    order: 10;
+}
+#id2{
+    order: 30;
+}
