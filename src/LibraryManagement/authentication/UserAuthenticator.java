@@ -35,7 +35,7 @@ public class UserAuthenticator {
     }
 
     public static int GetID(){
-        if (loggedInUser == null || loggedInUser.isAdmin()){
+        if (loggedInUser == null || !loggedInUser.isAdmin()){
             throw new IllegalArgumentException("Either user is logged out or user is not admin!");
         }
         return loggedInUser.getId();

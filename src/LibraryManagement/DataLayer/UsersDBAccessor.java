@@ -28,11 +28,10 @@ public class UsersDBAccessor implements IUsersDB{
     @Override
     public List<User> BlockMember(int memberID){
         Predicate<User> userPredicate = user -> user.getId() == memberID;
-        return LoadAllUsers().stream().map(user -> {
+        return LoadAllUsers().stream().peek(user -> {
             if (userPredicate.test(user)){
                 user.setActive(false);
             }
-            return user;
         }).collect(Collectors.toList());
     }
 
