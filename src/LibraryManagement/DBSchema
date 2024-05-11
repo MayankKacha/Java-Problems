@@ -1,0 +1,14 @@
+Database Schemas :
+
+here in below table schemas ID will be primary key auto incremented
+
+User
+ID Name Role Email IsActive
+
+Books - here copies can have int number of available copies with library and we can minus everytime user
+issues or delete and plus if User submits
+ID Copies Name AuthorName PublishedDate
+
+User-Books mapper
+UserID BookID BookIssueDate
+
